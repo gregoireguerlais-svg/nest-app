@@ -3,6 +3,10 @@
 > Ce fichier est le contexte de référence du projet. Lis-le au début de chaque session.
 > Il définit ce qu'on construit, comment, et dans quel ordre. Si une instruction de l'utilisateur
 > contredit ce fichier, demande confirmation avant d'agir.
+>
+> **Avant TOUT changement d'interface (UI), lis `design.md`** — c'est la source de vérité du
+> design system (couleurs, typo, composants, états). Les tokens y reflètent `src/theme/index.ts` :
+> garder ces deux fichiers synchronisés.
 
 ## 1. Vue d'ensemble
 
@@ -30,7 +34,8 @@ dépendances lourdes sans validation explicite. On reste simple et local.
 ## 3. Décision d'architecture clé : MVP local-first
 
 Le MVP tourne **sur un seul appareil**, sans serveur ni synchronisation multi-appareils.
-Les deux membres du foyer (Grégoire et Marine) sont **deux profils simulés dans la même app**.
+Les deux membres du foyer (Grégoire et Marine dans la démo ; leurs prénoms et couleurs sont
+choisis à l'onboarding) sont **deux profils simulés dans la même app**.
 L'utilisateur peut basculer de l'un à l'autre pour démontrer toute l'expérience (assignation,
 répartition, stats) sans backend.
 
@@ -42,7 +47,7 @@ Toutes les données (foyer, tâches, complétions) sont stockées **localement**
 ## 4. Périmètre du MVP
 
 ### Dans le MVP (à construire)
-1. **Onboarding** : splash → bienvenue → nommer le foyer + choisir une icône → choisir les catégories
+1. **Onboarding** : splash → bienvenue → nommer le foyer + choisir une icône → prénoms et couleurs des deux profils → choisir les catégories
 2. **Setup initial des tâches** : tâches suggérées (pré-remplies selon les catégories) + ajout de tâches personnalisées + assignation aux profils
 3. **Dashboard (Accueil)** : tâches du jour, sélecteur de semaine, filtre "Nous / Moi", cocher une tâche comme faite
 4. **Détail d'une tâche** : infos, fréquence + jours, assigné(s), historique, actions (modifier / supprimer / marquer fait)
@@ -137,47 +142,19 @@ type Household = {
 
 Style **doux et organique**. Chaleureux, minimaliste, jamais agressif.
 
-**Couleurs — palette exacte extraite du design Nest (source de vérité)**
-
-Fonds & surfaces :
-- Fond de l'app : `#FAF6EF` (beige très clair et chaud)
-- Fond secondaire / beige : `#F3EBDD`
-- Beige profond (séparateurs, aplats) : `#E9DCC8`
-- Cartes / surfaces : `#FEFDFB` (blanc cassé chaud)
-
-Verts (accent principal — profil Grégoire) :
-- Vert profond `sage-deep` (traits, texte accent, éléments actifs) : `#5E7A55`
-- Vert sauge `sage` (remplissages) : `#9DB48F`
-- Vert sauge très clair `sage-soft` (fonds sélectionnés légers) : `#E7EDDF`
-
-Terracotta (accent secondaire — profil Marine) :
-- Terracotta `terra` : `#C99478`
-- Terracotta profond `terra-deep` : `#9A5E42`
-- Terracotta clair `terra-soft` : `#F0E2D8`
-
-> Ajustement (retour utilisateur) : `terra-deep` est trop brun pour les boutons et éléments
-> actifs (coché, bordures, avatar de Marine). Dans le code, le token `terracotta` (rôle
-> "traits, éléments actifs") utilise plutôt `#C17E52` — une teinte intermédiaire entre
-> `terra-deep` et `terra`, plus orangée et plus douce. `terra` et `terra-soft` restent
-> inchangés pour les remplissages et les fonds sélectionnés légers.
-
-Texte :
-- Texte principal `ink` : `#4A4640` (gris chaud foncé, jamais de noir pur)
-
-Accents complémentaires disponibles (à utiliser avec parcimonie) :
-- Miel `honey` : `#D6A24E` — Prune `plum` : `#A57BA5` — Rouille `rust` : `#B66B47`
-
-> Note : le logo de l'app (`assets/nest-logo-contrast.svg`) utilise `#5E7A55` (traits + cœur)
-> et `#9DB48F` (remplissage maison). Utiliser ces mêmes tokens partout pour la cohérence.
+**Couleurs, typographie, composants** → voir `design.md` (source de vérité), dont les tokens
+reflètent `src/theme/index.ts`. Ne pas dupliquer les valeurs de couleur ici pour éviter toute
+divergence. En résumé : palette douce et chaude, vert sauge `sage` (#5E7A55) pour Grégoire,
+terracotta `terracotta` (#C17E52) pour Marine, police Nunito.
 
 **Style visuel**
 - Coins très arrondis (16px minimum sur les cartes, pilules pour les boutons)
 - Pas d'ombres agressives, pas de dégradés criards, pas de 3D
 - Espacement généreux entre les éléments
 - Typographie : sans-serif arrondie et amicale
-- Icônes : line art, trait fin et uniforme, couleur vert sauge — un jeu personnalisé sera fourni
-  (catégories, icônes de foyer, avatars). En attendant, utiliser des icônes line art d'une lib
-  cohérente (ex : `lucide-react-native`) en `#5C7A5C`.
+- Icônes : line art, trait fin et uniforme, couleur `sage` (#5E7A55). Pour le MVP : icônes
+  Lucide (`lucide-react-native`). Un jeu d'icônes personnalisé (catégories, foyer) et des
+  avatars illustrés sont prévus pour la **prochaine version**. Voir `design.md` section Assets.
 
 **Catégories et leurs icônes**
 - 🧹 Maison — maison
