@@ -148,7 +148,9 @@ Paramètres dans le MVP). Fond `surface`, bordure haute `border`, actif = `sage`
 **En-tête Stats** — icône + nom du foyer (`heading`) avant la carte Répartition.
 
 **Outils de démo** — bas du Dashboard : « Réinitialiser les données de démo », « Recommencer
-l'onboarding », « Aperçu du design system » (texte `caption` `muted`). Temporaires.
+l'onboarding » (texte `caption` `muted`), temporaires. « Aperçu du design system » n'apparaît qu'en
+développement (`__DEV__`) ; en production, `/design-system` et toute adresse inconnue ramènent à
+l'accueil (`src/app/+not-found.tsx`).
 
 ---
 

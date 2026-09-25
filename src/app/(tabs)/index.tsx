@@ -128,9 +128,11 @@ export default function DashboardScreen() {
           <Pressable onPress={restartOnboarding}>
             <AppText variant="caption" muted>Recommencer l’onboarding</AppText>
           </Pressable>
-          <Link href="/design-system">
-            <AppText variant="caption" muted>Aperçu du design system</AppText>
-          </Link>
+          {__DEV__ && (
+            <Link href="/design-system">
+              <AppText variant="caption" muted>Aperçu du design system</AppText>
+            </Link>
+          )}
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -1,3 +1,4 @@
+import { Redirect } from 'expo-router';
 import { useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -19,8 +20,13 @@ const categories: { key: CategoryIconKey; label: string }[] = [
   { key: 'works', label: 'Travaux' },
 ];
 
-// Écran temporaire : vitrine du design system (remplacé par le Dashboard à l'étape 4).
+// Vitrine du design system, réservée au développement : en production (site web, testeurs),
+// cette adresse ramène simplement à l'accueil.
 export default function DesignSystemScreen() {
+  return __DEV__ ? <DesignSystemPreview /> : <Redirect href="/" />;
+}
+
+function DesignSystemPreview() {
   const [done, setDone] = useState(false);
   const [doneMarine, setDoneMarine] = useState(true);
   const { data, updateData, resetToDemo } = useApp();
