@@ -11,6 +11,21 @@ les tâches du quotidien de façon équilibrée et à réduire la charge mentale
 
 ---
 
+## Aperçu
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/01-splash.png" width="230" alt="Écran de démarrage"><br><sub>Démarrage</sub></td>
+    <td align="center"><img src="docs/screenshots/02-bienvenue.png" width="230" alt="Écran de bienvenue"><br><sub>Bienvenue</sub></td>
+    <td align="center"><img src="docs/screenshots/03-taches.png" width="230" alt="Liste des tâches par catégorie"><br><sub>Tâches par catégorie et suggestions</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/screenshots/04-detail-tache.png" width="230" alt="Détail d'une tâche"><br><sub>Détail d'une tâche</sub></td>
+    <td align="center"><img src="docs/screenshots/05-formulaire-tache.png" width="230" alt="Formulaire de tâche"><br><sub>Ajout et édition d'une tâche</sub></td>
+    <td align="center"><img src="docs/screenshots/06-stats.png" width="230" alt="Statistiques de répartition"><br><sub>Stats et message de gratitude</sub></td>
+  </tr>
+</table>
+
 ## Le problème
 
 Dans un couple, la charge mentale du foyer est souvent invisible : celui ou celle qui pense aux
