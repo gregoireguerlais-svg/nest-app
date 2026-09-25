@@ -20,14 +20,14 @@ les tâches du quotidien de façon équilibrée et à réduire la charge mentale
     <td align="center"><img src="docs/screenshots/03-categories.png" width="230" alt="Choix des catégories"><br><sub>Choix des catégories</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/04-accueil.png" width="230" alt="Accueil avec les tâches du jour"><br><sub>Accueil : tâches du jour et remerciement reçu</sub></td>
-    <td align="center"><img src="docs/screenshots/05-taches.png" width="230" alt="Tâches par catégorie"><br><sub>Tâches par catégorie et suggestions</sub></td>
-    <td align="center"><img src="docs/screenshots/06-formulaire-tache.png" width="230" alt="Formulaire de tâche"><br><sub>Ajout et édition d'une tâche</sub></td>
+    <td align="center"><img src="docs/screenshots/04-taches.png" width="230" alt="Tâches par catégorie"><br><sub>Tâches par catégorie et suggestions</sub></td>
+    <td align="center"><img src="docs/screenshots/05-formulaire-tache.png" width="230" alt="Formulaire de tâche"><br><sub>Ajout et édition d'une tâche</sub></td>
+    <td align="center"><img src="docs/screenshots/06-detail-tache.png" width="230" alt="Détail d'une tâche"><br><sub>Détail d'une tâche</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/07-detail-tache.png" width="230" alt="Détail d'une tâche"><br><sub>Détail d'une tâche</sub></td>
-    <td align="center"><img src="docs/screenshots/08-stats.png" width="230" alt="Statistiques de répartition"><br><sub>Stats et message de gratitude</sub></td>
-    <td align="center"><img src="docs/screenshots/09-remerciement.png" width="230" alt="Remerciement envoyé avec notification"><br><sub>Remerciement envoyé (notification locale)</sub></td>
+    <td align="center"><img src="docs/screenshots/07-stats.png" width="230" alt="Statistiques de répartition"><br><sub>Stats et message de gratitude</sub></td>
+    <td align="center"><img src="docs/screenshots/08-remerciement.png" width="230" alt="Remerciement envoyé avec notification"><br><sub>Remerciement envoyé (notification locale)</sub></td>
+    <td align="center"><img src="docs/screenshots/09-accueil.png" width="230" alt="Accueil avec les tâches du jour"><br><sub>Accueil : tâches du jour et remerciement reçu</sub></td>
   </tr>
 </table>
 
