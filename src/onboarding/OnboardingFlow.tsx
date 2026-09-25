@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { categories } from '@/data/catalog';
@@ -14,6 +14,7 @@ import { NestMark } from '@/components/ui/NestMark';
 import { HomeScene } from '@/onboarding/HomeScene';
 import { colors, fonts, radius, spacing, type MemberColor } from '@/theme';
 import type { AppData, Member } from '@/types';
+import { showNotice } from '@/utils/dialog';
 
 const HOUSEHOLD_ICON_ENTRIES = Object.entries(householdIcons);
 
@@ -94,7 +95,7 @@ export function OnboardingFlow({ onComplete }: Props) {
             <Button label="Créer mon foyer" onPress={() => setStep('household')} />
             <Pressable
               onPress={() =>
-                Alert.alert(
+                showNotice(
                   'Bientôt disponible',
                   'La synchronisation entre appareils pour rejoindre un foyer existant arrive dans une prochaine version 🌱',
                 )

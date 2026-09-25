@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { ChevronLeft } from 'lucide-react-native';
-import { Alert, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/AppText';
@@ -12,6 +12,7 @@ import { deleteTask, toggleCompletion } from '@/storage/actions';
 import { useApp } from '@/storage/AppProvider';
 import { colors, spacing } from '@/theme';
 import { capitalize, formatLongDate, parseDateKey, toDateKey } from '@/utils/date';
+import { confirmDestructive } from '@/utils/dialog';
 import { formatDays, formatFrequency } from '@/utils/schedule';
 
 export default function TaskDetailScreen() {
@@ -34,17 +35,10 @@ export default function TaskDetailScreen() {
     .slice(0, 20);
 
   const confirmDelete = () =>
-    Alert.alert('Supprimer cette tâche ?', 'Son historique sera aussi supprimé.', [
-      { text: 'Annuler', style: 'cancel' },
-      {
-        text: 'Supprimer',
-        style: 'destructive',
-        onPress: () => {
-          router.back();
-          updateData((d) => deleteTask(d, task.id));
-        },
-      },
-    ]);
+    confirmDestructive('Supprimer cette tâche ?', 'Son historique sera aussi supprimé.', 'Supprimer', () => {
+      router.back();
+      updateData((d) => deleteTask(d, task.id));
+    });
 
   return (
     <SafeAreaView style={styles.safe}>

@@ -27,6 +27,7 @@ pas une architecture de production complexe.
 - **Stockage local** : `@react-native-async-storage/async-storage` (ou `expo-sqlite` si besoin de requêtes)
 - **Icônes** : jeu d'icônes personnalisé fourni par l'utilisateur (style line art vert sauge) — voir section DA
 - **Tests sur appareil** : **Expo Go** (app gratuite sur l'App Store, scan d'un QR code — aucun compte Apple Developer requis à ce stade)
+- **Testeurs externes** : version web hébergée sur EAS Hosting (`https://nest-app.expo.app`, `npm run deploy:web`). Depuis mai 2026, Expo Go n'ouvre plus les mises à jour EAS que pour le propriétaire du projet : ne pas envoyer de lien `exp://` à des testeurs. Voir `distribution/TESTEURS.md`.
 
 Ne pas ajouter de backend, de base de données distante, d'authentification serveur ou de
 dépendances lourdes sans validation explicite. On reste simple et local.

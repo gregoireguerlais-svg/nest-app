@@ -45,7 +45,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "publish:preview": "npx --yes eas-cli@latest update --branch preview --environment preview --message \"Mise à jour testeurs\""
+    "publish:preview": "npx --yes eas-cli@latest update --branch preview --environment preview --message \"Mise à jour testeurs\"",
+    "deploy:web": "npx expo export -p web && npx --yes eas-cli@latest deploy --prod --non-interactive"
   },
   "private": true
 }

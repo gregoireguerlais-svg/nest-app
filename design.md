@@ -26,7 +26,7 @@ Règles transversales :
 
 **Fonds & surfaces**
 - `background` : `#FAF6EF` — fond de l'app (beige très clair et chaud)
-- `backgroundSecondary` : `#F3EBDD` — fond secondaire (défini, pas encore utilisé)
+- `backgroundSecondary` : `#F3EBDD` — fond secondaire ; utilisé pour les marges autour de l'app sur le web (grand écran)
 - `surface` : `#FEFDFB` — cartes, champs de saisie, texte sur fond coloré
 - `border` : `#E9DCC8` — bordures de cartes, champs, tâches suggérées
 
@@ -149,6 +149,13 @@ Paramètres dans le MVP). Fond `surface`, bordure haute `border`, actif = `sage`
 
 **Outils de démo** — bas du Dashboard : « Réinitialiser les données de démo », « Recommencer
 l'onboarding », « Aperçu du design system » (texte `caption` `muted`). Temporaires.
+
+---
+
+**Version web** — l'app reste dans une colonne de 480px maximum, centrée, sur fond
+`backgroundSecondary` (`src/app/_layout.tsx`). `Alert.alert` ne fonctionne pas sur le web : passer
+par `src/utils/dialog.ts` (`showNotice`, `confirmDestructive`) pour toute fenêtre de message ou
+de confirmation.
 
 ---
 
