@@ -8,7 +8,7 @@ les tâches du quotidien de façon équilibrée et à réduire la charge mentale
 👉 **Essayer la version web : [nest-app.expo.app](https://nest-app.expo.app)**
 (ouvre le lien sur ton téléphone ou ton ordinateur, aucun compte nécessaire)
 
-> Projet de portfolio, conçu et développé en solo par un Product Manager en reconversion.
+> Projet conçu et développé en solo par un Product Growth Manager.
 
 ---
 
@@ -118,25 +118,6 @@ Style **doux et organique** : beige chaud, vert sauge pour le premier profil, te
 second, coins très arrondis, aucune ombre. Le design system complet est décrit dans
 [`design.md`](design.md), et ses tokens sont regroupés dans `src/theme/index.ts`.
 
-## Ce que j'ai appris en le construisant
-
-- **Expo Go ne convient plus à des testeurs extérieurs.** Depuis mai 2026, Expo Go n'ouvre les
-  mises à jour publiées que pour le propriétaire du projet. Pour faire tester à distance, j'ai
-  publié une version web accessible par simple lien.
-- **Le web n'est pas un mobile.** Certaines fonctions natives (fenêtres de confirmation) ne
-  marchent pas dans un navigateur : le projet passe par un petit utilitaire compatible partout.
-- **Un design system centralisé** (un seul fichier de couleurs) permet de changer toute la palette
-  en un endroit, ce qui a servi lors de l'ajustement du terracotta.
-
-## Et après (V2)
-
-- Synchronisation entre deux téléphones (invitation du partenaire, données partagées)
-- Notifications push entre les deux personnes
-- Icônes et avatars illustrés personnalisés
-- Écran Paramètres (modifier le foyer, les prénoms, les catégories)
-- Fréquences plus fines (« toutes les 2 semaines », « au besoin »)
-- Gestion de plusieurs foyers
-
 ## Auteur
 
-Grégoire Guerlais — Product Manager en reconversion.
+Grégoire Guerlais — Product Growth Manager.
