@@ -1,4 +1,5 @@
-# Nest 🪺
+<img src="docs/nest-icon.png" width="72" alt="Icône de Nest" align="left"> <h1>Nest</h1>
+<br clear="left">
 
 **Nest est une application mobile de gestion du foyer pour les couples.** Elle aide à répartir
 les tâches du quotidien de façon équilibrée et à réduire la charge mentale, en rendant visible
